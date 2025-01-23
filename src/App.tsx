@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { models, Report, Embed, service, Page } from "powerbi-client";
 import { IHttpPostMessageResponse } from "http-post-message";
 import { PowerBIEmbed } from "powerbi-client-react";
