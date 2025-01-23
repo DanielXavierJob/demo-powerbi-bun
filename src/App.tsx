@@ -6,7 +6,6 @@ import { PowerBIEmbed } from "powerbi-client-react";
 import "powerbi-report-authoring";
 
 import axios from "axios";
-import "./App.css";
 import { sampleReportUrl } from "./constants";
 
 function App() {
@@ -79,11 +78,7 @@ function App() {
     console.log("Embed Report clicked");
 
     // Get the embed config from the service
-    const reportConfigResponse = await axios.get(sampleReportUrl, {
-      headers: {
-        "Access-Control-Allow-Origin": "*", // Substitua '*' pelo domínio do seu aplicativo
-      },
-    });
+    const reportConfigResponse = await axios.get(sampleReportUrl);
 
     if (reportConfigResponse.status !== 200) {
       console.error(
